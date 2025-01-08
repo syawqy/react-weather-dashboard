@@ -2,7 +2,7 @@
 
 A modern weather application built with React and TypeScript, featuring real-time weather data from OpenWeather API.
 
-![App Screenshot - Add screenshot here]
+![App Screenshot](https://github.com/syawqy/react-weather-dashboard/blob/main/screenshot.png?raw=true)
 
 ## ✨ Features
 
