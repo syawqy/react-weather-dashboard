@@ -69,8 +69,7 @@ react-weather-dashboard/
 │   ├── components/
 │   │   ├── SearchBar.tsx
 │   │   ├── WeatherCard.tsx
-│   │   ├── LoadingSkeleton.tsx
-│   │   └── ErrorBoundary.tsx
+│   │   └── LoadingSkeleton.tsx
 │   ├── services/
 │   │   └── weatherAPI.ts
 │   ├── types/

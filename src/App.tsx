@@ -3,6 +3,7 @@ import { SearchBar } from './components/SearchBar';
 import { WeatherCard } from './components/WeatherCard';
 import { getWeather } from './services/weatherAPI';
 import { WeatherData } from './types';
+import { LoadingSkeleton } from './components/LoadingSkeleton';
 
 function App() {
   const [weather, setWeather] = useState<WeatherData | null>(null);
@@ -32,13 +33,14 @@ function App() {
 
         <SearchBar onSearch={handleSearch} isLoading={isLoading} />
 
-        {error && (
-          <div className="p-4 bg-red-100 text-red-700 rounded-lg">
-            {error}
-          </div>
+        {isLoading && <LoadingSkeleton />}
+        {!isLoading && weather && <WeatherCard data={weather} />}
+        {!isLoading && error && (
+            <div className="p-4 bg-red-100 text-red-700 rounded-lg">
+              {error}
+            </div>
         )}
 
-        {weather && <WeatherCard data={weather} />}
       </div>
     </div>
   );
